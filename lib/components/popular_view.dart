@@ -16,7 +16,7 @@ class _PopularViewState extends State<PopularView> {
             crossAxisCount: 2, childAspectRatio: 0.62, crossAxisSpacing: 16, mainAxisSpacing: 16),
         itemCount: 10,
         itemBuilder: (context, index) {
-          return Container(color: Colors.blue);
+          return Container(color: Colors.blue.withAlpha(30));
         });
   }
 }

@@ -79,9 +79,9 @@ tabBarView({required controller}) {
     controller: controller,
     children: [
       const PopularView(),
-      Container(color: Colors.green),
-      Container(color: Colors.yellow),
-      Container(color: Colors.pink),
+      Container(color: Colors.green.withAlpha(30)),
+      Container(color: Colors.orange.withAlpha(30)),
+      Container(color: Colors.pink.withAlpha(30)),
     ],
   ));
 }
