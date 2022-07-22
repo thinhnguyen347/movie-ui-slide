@@ -1,6 +1,6 @@
 class ItemPopular {
-  String? name;
-  String? urlPhoto;
-  String? releaseDate;
-  ItemPopular({name, urlPhoto, releaseDate});
+  final String name;
+  final String urlPhoto;
+  final String releaseDate;
+  ItemPopular({required this.name, required this.urlPhoto, required this.releaseDate});
 }
