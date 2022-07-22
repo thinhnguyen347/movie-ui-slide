@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:movie_slide/models/item_popular.dart';
 
 class PopularView extends StatefulWidget {
   const PopularView({Key? key}) : super(key: key);
@@ -19,13 +20,6 @@ class _PopularViewState extends State<PopularView> {
           return itemPopular(listItemPopular[index]);
         });
   }
-}
-
-class ItemPopular {
-  String? name;
-  String? urlPhoto;
-  String? releaseDate;
-  ItemPopular({name, urlPhoto, releaseDate});
 }
 
 final List<ItemPopular> listItemPopular = [
@@ -65,7 +59,7 @@ Widget itemPopular(ItemPopular itemPopular) {
         children: [
           ClipRRect(
             borderRadius: BorderRadius.circular(8),
-            child: Image.asset(itemPopular.urlPhoto.toString()),
+            child: Image.asset(itemPopular.urlPhoto.toString(), fit: BoxFit.cover),
           ),
           Expanded(child: Text(itemPopular.name.toString()))
         ],
