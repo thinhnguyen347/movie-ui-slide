@@ -33,7 +33,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
           height: MediaQuery.of(context).size.height,
           decoration: const BoxDecoration(
             image: DecorationImage(
-              image: AssetImage("images/bg.jpg"),
+              image: AssetImage("assets/images/bg.jpg"),
               fit: BoxFit.cover,
             ),
           ),
