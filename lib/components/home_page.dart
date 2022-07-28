@@ -10,6 +10,7 @@ class HomePage extends StatefulWidget {
 
 class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   late TabController tabController;
+  List<Widget> tabs = const [Text('Popular'), Text('Now Playing'), Text('Upcoming'), Text('Top Rated')];
 
   @override
   void initState() {
@@ -44,7 +45,7 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
             DefaultTabController(
               initialIndex: 0,
               length: 4,
-              child: tabBar(controller: tabController),
+              child: tabBar(controller: tabController, tabs: tabs),
             ),
             DefaultTabController(
                 length: 4, initialIndex: 0, child: tabBarView(controller: tabController)),
@@ -55,12 +56,12 @@ class _HomePageState extends State<HomePage> with TickerProviderStateMixin {
   }
 }
 
-tabBar({required controller}) {
+tabBar({required controller, required List<Widget> tabs}) {
   return Padding(
     padding: const EdgeInsets.only(top: 70, left: 25, bottom: 10),
     child: TabBar(
       controller: controller,
-      tabs: const [Text('Popular'), Text('Now Playing'), Text('Upcoming'), Text('Top Rated')],
+      tabs: tabs,
       indicatorColor: Colors.white,
       indicatorPadding: const EdgeInsets.symmetric(horizontal: 10),
       labelPadding: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
